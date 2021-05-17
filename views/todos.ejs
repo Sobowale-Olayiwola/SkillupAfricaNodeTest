@@ -1,0 +1,14 @@
+<div class="col-sm-6">
+  <img src="images/female_thinking.jpg" alt="">
+</div>
+<div class="col-sm-6">
+  <h1 class="title">Your Personal Todo List</h1>
+  <h1>Your Todos</h1>
+  <% Todos.forEach(todo => { %>
+  <h5>
+    <%= todo.name %>
+  </h5>
+  <span>$
+    <%= todo.title %> </span>
+  <% }); %>
+</div>
