@@ -35,9 +35,14 @@ module.exports = class FrontendTodoController {
     }
   }
 
+  static updateTodoForm (request, response) {
+    response.render('updateForm', {uniqueid: request.params.uniqueid})
+  }
+
   static async updateTodo(request, response) {
     try {
-      let todo = await TodoService.updateTodo(request.params.id, request.body.description);
+      let todo = await TodoService.updateTodo(request.params.uniqueid, request.body.description);
+      console.log(todo);
       if (todo) {
         response.render('success');
       } else {
@@ -52,7 +57,7 @@ module.exports = class FrontendTodoController {
   static async deleteTodoById(request, response) {
     try {
       await TodoService.deleteTodoById(request.params.uniqueid);
-      response.render('success')
+      response.render('delete')
     } catch (error) {
       response.render('error')
     }

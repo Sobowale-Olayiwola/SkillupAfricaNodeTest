@@ -26,14 +26,14 @@ router.get('/', (req, res) => {
 /**
  *  Get a Todo by unique id
  */
-router.get('/update/:uniqueid',  (req, res) => {
-    router.get('/form', (req, res, next) => {
-        FrontendTodoController.todoFormPage(req, res);
-        next()
-    } )
+router.post('/update/:uniqueid',  (req, res) => {
   FrontendTodoController.updateTodo(req,res)
   // TODO return a proper response to the user when no todo is found.
 }); 
+
+router.get('/updateForm/:uniqueid', (req, res) => {
+  FrontendTodoController.updateTodoForm(req,res)
+})
 
 router.get('/delete/:uniqueid', (req, res) => {
   FrontendTodoController.deleteTodoById(req, res);

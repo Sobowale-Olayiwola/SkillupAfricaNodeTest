@@ -12,7 +12,7 @@
     "Todo",
     "priority"
   ],
-  "author": "Chesvic Lordgape",
+  "author": "Olayiwola Sobowale",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
