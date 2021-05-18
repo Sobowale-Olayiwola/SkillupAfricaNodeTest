@@ -1,1 +1,3 @@
 ## A simple web server create a Todo App using Node.js, involving lessons taught at Skillup Africa, Tutor Lordgape, Lynda Videos and other personal study materials.
+
+### It also includes a hashstream file that fetches data from an api https://coderbyte.com/api/challenges/json/age-counting, and finds a key and age value of 32 and creates them into an item object which finally generates a Hash code for output.txt file which is Hash : 0cf03d260b4c5e9bb33d4bd1fbdf35f5.
